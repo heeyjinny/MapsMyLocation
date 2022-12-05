@@ -29,9 +29,7 @@ import com.heeyjinny.mapsmylocation.databinding.ActivityMapsBinding
 //GooglePlayService의존성 추가
 //FusedLocationProviderClient API사용을 위해
 //구글플레이 서비스의 Location라이브러리 의존성 추가
-//Location라이브러리는 Maps라이브러리와 버전이 같아야 함
-//Location라이브러리 버전: https://developers.google.com/android/guides/setup
-//build.gradle에 추가
+//build.gradle 작성
 
 //3
 //스마트폰의 위치 기능에 접근을 위한 권한 선언

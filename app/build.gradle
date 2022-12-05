@@ -46,15 +46,21 @@ android {
 
 dependencies {
 
-    //위치 의존성 추가하고 maps라이브러리의 버전과 같게 설정
-    implementation 'com.google.android.gms:play-services-location:21.0.1'
-    implementation 'com.google.android.gms:play-services-maps:12.0.1'
-
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    //위치 의존성 추가
+    //FusedLocationProviderClient API사용을 위해
+    //구글플레이 서비스의 Location라이브러리 의존성 추가
+    //Location라이브러리 버전: https://developers.google.com/android/guides/setup
+    //버전 확인하여 의존성 build.gradle에 붙여넣기 하거나
+    //상단 open 선택 후 Dependencies - app - + - library Dependency에
+    //play-services-location 검색 후 추가...
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
