@@ -4,11 +4,19 @@ plugins {
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
+//local.properties 불러오기
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
 android {
     namespace 'com.heeyjinny.mapsmylocation'
     compileSdk 32
 
     defaultConfig {
+
+        //구글맵 키 추가
+        buildConfigField "String", "GOOLE_MAP_KEY", properties ['GOOGLE_MAP_KEY']
+
         applicationId "com.heeyjinny.mapsmylocation"
         minSdk 23
         targetSdk 32
