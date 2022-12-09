@@ -15,7 +15,9 @@ android {
     defaultConfig {
 
         //구글맵 키 추가
-        buildConfigField "String", "GOOLE_MAP_KEY", properties ['GOOGLE_MAP_KEY']
+        //키 값 변수에 저장
+        //타입 - 키 - 값 순서
+        buildConfigField "String", "GOOGLE_MAP_KEY", properties ['GOOGLE_MAP_KEY']
 
         applicationId "com.heeyjinny.mapsmylocation"
         minSdk 23
@@ -46,12 +48,6 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
-    implementation 'com.google.android.gms:play-services-maps:18.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-
     //위치 의존성 추가
     //FusedLocationProviderClient API사용을 위해
     //구글플레이 서비스의 Location라이브러리 의존성 추가
@@ -61,6 +57,11 @@ dependencies {
     //play-services-location 검색 후 추가...
     implementation 'com.google.android.gms:play-services-location:21.0.1'
 
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
